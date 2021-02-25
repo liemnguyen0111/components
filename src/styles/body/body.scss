@@ -1,0 +1,258 @@
+section {
+  min-height: calc(100vh - 70px);
+  scroll-margin-top: 70px;
+  margin: 0 50px;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
+// Shared classes -------------------------------------------------------------------------------------------
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-span {
+  flex: 1;
+}
+
+.card-item-size {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: calc(100% - 50px);
+  min-width: 20rem;
+  margin: auto;
+}
+
+.j-center {
+  justify-content: center;
+}
+
+.a-center {
+  align-items: center;
+}
+
+.no-style {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-margin-right{
+  li{
+    margin-right: 10px;
+  }
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.text-align-left {
+  text-align: left;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.auora-background {
+  box-shadow: inset -2px -2px 10px 1px rgba(100, 116, 122, .8), inset 0px 0px 10px 1px rgba(0, 0, 0, .5);
+  // backdrop-filter: blur(10px) drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.4));
+
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   z-index: -1;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   padding: 2px;
+  //   border-radius: 20px;
+  //   background: linear-gradient(to bottom right, #a12cb686, #77cccc86);
+  //   -webkit-mask:
+  //     linear-gradient(#fff 0 0) content-box,
+  //     linear-gradient(#fff 0 0);
+  //   -webkit-mask-composite: destination-out;
+  //   mask-composite: exclude;
+  // }
+
+}
+
+.font-400 {
+  font-weight: 400;
+}
+
+i {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+// Big Card -------------------------------------------------------------------------------------------
+.project-b-card {
+  // min-height: 80vh;
+  max-height: auto;
+  max-width: 1600px;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+// .item-wrapper * {
+//   transition: .5s ease-in-out;
+// }
+
+.b-card-title {
+  width: 100%;
+}
+
+.featured {
+  margin: auto 0 auto auto;
+}
+
+.b-card-info {
+  width: 600px;
+  max-width: 600px;
+  margin-left: 50px;
+  margin-right: 0;
+
+  *{
+     transition: var(--cardInfoTrans);
+  }
+}
+
+.b-card-description {
+  min-height: 150px;
+  height: var(--bcdHeight);
+  overflow: hidden;
+}
+
+.view-more-less {
+  display: none;
+
+  span{
+    margin-left: 10px;
+  }
+}
+
+.chev-up {
+  transform: rotate(-180deg);
+}
+
+.tech-used {
+  margin: 0 auto 20px 50px;
+  overflow: auto;
+  h4 {
+    border-bottom: 2px solid white;
+  }
+
+  ul{
+    li{
+      // border: 1px solid white;
+      border-radius: 10px;
+      padding: 2px 10px;
+    }
+  }
+}
+
+.b-card-image {
+  margin-top: 20px;
+
+  svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.logo-brand{
+  transform-origin: center;
+  svg{
+    width: 50px;
+    height: 50px;
+    background: transparent;
+  }
+
+  .logo-text{
+    // fill: white;
+    transform-origin: center ;
+    animation: rotate 4s ease infinite;
+  }
+
+  #react-brand{
+    // fill: blue;
+    transform-origin: center;
+    animation: rotate 2s ease-in-out infinite alternate-reverse;
+  }
+
+  #leaf-1{
+    transform-origin: bottom center;
+    animation: rotate-leaf 2s ease-in-out infinite alternate-reverse;
+  }
+}
+
+@keyframes rotate-leaf{
+  to{
+    transform: rotate(20deg) translate(-20px, 5px);
+  }
+}
+@keyframes rotate {
+  to{
+    transform: rotate(360deg);
+  }
+}
+// Media queries -------------------------------------------------------------------------------------------
+@media only screen and (max-width: 600px) {
+
+  section {
+    margin: 0 10px;
+  }
+
+  .height-shrink {
+    min-height: 0px !important;
+    height: 0px !important;
+  }
+
+  .b-card-image {
+
+    svg {
+      height: 400px;
+    }
+  }
+
+  .b-card-info {
+    margin: 0;
+    padding: 20px;
+  }
+
+  .view-more-less {
+    display: inline-flex;
+    margin: 20px 0;
+  }
+
+  .tech-used {
+    margin: 0 20px 20px 20px;
+  }
+}

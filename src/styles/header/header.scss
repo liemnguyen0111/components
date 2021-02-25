@@ -1,0 +1,60 @@
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 70px;
+    // background: rgb(110, 110, 110);
+    overflow: hidden;
+}
+
+nav{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+// Logo -----------------------------
+.logo {
+    height: 50px;
+    width: 50px;
+    pointer-events: auto !important;
+    z-index: 3;
+    path {
+        pointer-events: none;
+    }
+}
+
+.SVGplay g:nth-child(1) path{
+    stroke-dasharray: 310.3;
+    stroke-dashoffset: 0;
+    animation: logo-play 3s ease-out  ;
+}
+
+
+.SVGplay g:nth-child(2) path{
+    stroke-dasharray: 15.72;
+    stroke-dashoffset: 0;
+    animation: logo-play2 3s ease-out  ;
+}
+
+@keyframes logo-play {
+    from{
+        stroke-dasharray: 150;
+        stroke-dashoffset: 300.8;
+    }
+    to{
+        stroke-dasharray: 310.3;
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes logo-play2 {
+    from{
+        stroke-dasharray: 6.72;
+        stroke-dashoffset: 15.72;
+    }
+    to{
+        stroke-dasharray: 15.72;
+        stroke-dashoffset: 0;
+    }
+}

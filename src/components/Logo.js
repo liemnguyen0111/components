@@ -12,16 +12,16 @@ const Logo = ({ classes, onClick, svg }) => {
 
   return (
     <div className={classes}>
-      <svg
-        className={`logo ${svg}`}
+      {/* <svg
+        className={`logo SVGplay`}
         ref={logo}
-        id="logo"
-        data-name="home"
+        // id="logo"
+        // data-name="home"
         width="52"
         height="58"
         viewBox="0 0 52 58"
         fill="none"
-        onClick={(e) => (onClick(e), onSVGClick())}
+        onClick={(e) => (onSVGClick())}
       >
         <g filter="url(#filter0_d)">
           <path
@@ -105,7 +105,9 @@ const Logo = ({ classes, onClick, svg }) => {
             />
           </filter>
         </defs>
-      </svg>
+      </svg> */}
     </div>
   );
 };
+
+export default Logo;

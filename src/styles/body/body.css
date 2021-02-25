@@ -1,0 +1,286 @@
+section {
+  min-height: calc(100vh - 70px);
+  scroll-margin-top: 70px;
+  margin: 0 50px;
+}
+
+.section-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.flex-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.flex-span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.card-item-size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: calc(100% - 50px);
+  min-width: 20rem;
+  margin: auto;
+}
+
+.j-center {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.a-center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.no-style {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+.list-margin-right li {
+  margin-right: 10px;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.text-align-left {
+  text-align: left;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.auora-background {
+  -webkit-box-shadow: inset -2px -2px 10px 1px rgba(100, 116, 122, 0.8), inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: inset -2px -2px 10px 1px rgba(100, 116, 122, 0.8), inset 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.font-400 {
+  font-weight: 400;
+}
+
+i {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.project-b-card {
+  max-height: auto;
+  max-width: 1600px;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+.b-card-title {
+  width: 100%;
+}
+
+.featured {
+  margin: auto 0 auto auto;
+}
+
+.b-card-info {
+  width: 600px;
+  max-width: 600px;
+  margin-left: 50px;
+  margin-right: 0;
+}
+
+.b-card-info * {
+  -webkit-transition: var(--cardInfoTrans);
+  transition: var(--cardInfoTrans);
+}
+
+.b-card-description {
+  min-height: 150px;
+  height: var(--bcdHeight);
+  overflow: hidden;
+}
+
+.view-more-less {
+  display: none;
+}
+
+.view-more-less span {
+  margin-left: 10px;
+}
+
+.chev-up {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.tech-used {
+  margin: 0 auto 20px 50px;
+  overflow: auto;
+}
+
+.tech-used h4 {
+  border-bottom: 2px solid white;
+}
+
+.tech-used ul li {
+  border-radius: 10px;
+  padding: 2px 10px;
+}
+
+.b-card-image {
+  margin-top: 20px;
+}
+
+.b-card-image svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo-brand {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.logo-brand svg {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+}
+
+.logo-brand .logo-text {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: rotate 4s ease infinite;
+          animation: rotate 4s ease infinite;
+}
+
+.logo-brand #react-brand {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  animation: rotate 2s ease-in-out infinite alternate-reverse;
+}
+
+.logo-brand #leaf-1 {
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  animation: rotate-leaf 2s ease-in-out infinite alternate-reverse;
+}
+
+@-webkit-keyframes rotate-leaf {
+  to {
+    -webkit-transform: rotate(20deg) translate(-20px, 5px);
+            transform: rotate(20deg) translate(-20px, 5px);
+  }
+}
+
+@keyframes rotate-leaf {
+  to {
+    -webkit-transform: rotate(20deg) translate(-20px, 5px);
+            transform: rotate(20deg) translate(-20px, 5px);
+  }
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  section {
+    margin: 0 10px;
+  }
+  .height-shrink {
+    min-height: 0px !important;
+    height: 0px !important;
+  }
+  .b-card-image svg {
+    height: 400px;
+  }
+  .b-card-info {
+    margin: 0;
+    padding: 20px;
+  }
+  .view-more-less {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin: 20px 0;
+  }
+  .tech-used {
+    margin: 0 20px 20px 20px;
+  }
+}
+/*# sourceMappingURL=body.css.map */

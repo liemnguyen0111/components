@@ -1,0 +1,149 @@
+// ChatBox
+.btn-cb {
+    &:nth-child(4) {
+        animation: btn-cb 3s ease infinite alternate-reverse 0.1s;
+    }
+
+    &:nth-child(5) {
+        animation: btn-cb 3s ease infinite alternate-reverse 0.4s;
+    }
+
+    &:nth-child(6) {
+        animation: btn-cb 3s ease infinite alternate-reverse 0.7s;
+    }
+
+    &:nth-child(7) {
+        animation: btn-cb 3s ease infinite alternate-reverse 0.9s;
+    }
+
+}
+
+#user-1 {
+    animation: user-1 2s ease infinite alternate-reverse;
+}
+
+#user-2 {
+    animation: user-2 2s ease-in infinite alternate 1s;
+
+    .active-status {
+        animation: on-off 3s ease infinite alternate;
+    }
+}
+
+#message-1 {
+    animation: message 3s ease-out infinite alternate-reverse;
+}
+
+#message-2 {
+    animation: message 3s ease-out infinite alternate-reverse 1s;
+}
+
+@keyframes on-off {
+    0%{
+        fill: #FF6D6D;
+    }
+    50%{
+        fill: #FF6D6D;
+    }
+}
+
+@keyframes btn-cb {
+    from {
+        transform: translate(-5px, 5px);
+    }
+}
+
+@keyframes user-1 {
+    to {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes user-2 {
+    to {
+        transform: rotate(-1deg);
+    }
+}
+
+@keyframes message {
+    from {
+        opacity: 0;
+        transform: translate(0, 5px);
+    }
+}
+
+// Cache Project
+#cache-project{
+    transform-style: preserve-3d;
+}
+
+.cache-screen{
+    transform-origin: center;
+    transform: translate3d(0, 0, 0px);
+    animation: rotate-phone 3s ease-out infinite alternate-reverse;
+}
+
+.card-right{
+
+    transform-origin: right;
+    animation: rotate-card-right 2s ease-out infinite alternate-reverse 1s;
+}
+
+
+.btn-right{
+    transform-origin: right;
+    animation: rotate-card-right 2s ease-out infinite alternate-reverse ;
+}
+
+
+.card-left, .btn-left{
+    transform-origin: left;
+    animation: rotate-card-left 2s ease-out infinite alternate-reverse ;
+}
+
+.card-left-1{
+    transform-origin: left;
+    animation: rotate-card-left-1 2s ease-out infinite alternate-reverse ;
+}
+
+@keyframes rotate-phone{
+    0%{
+        transform: rotateY(-12deg) skewY(.5deg);
+    }
+    20%{
+        transform: rotateY(0deg);   
+    }
+    80%{
+        transform: rotateY(0deg);   
+    }
+    100%{
+        transform: rotateY(12deg)  skewY(-.5deg);   
+    }
+}
+
+@keyframes rotate-card-right{
+    0%{
+        transform: translateZ(-10px)  rotateY(10deg) skewY(-2deg);
+    }
+    100%{
+        transform:translateZ(10px)  rotateY(0deg);   
+    }
+}
+
+@keyframes rotate-card-left{
+    0%{
+        transform: translateZ(-10px)  rotateY(-10deg) skewY(1deg);
+    }
+    100%{
+        transform:translateZ(10px)  rotateY(0deg);   
+    }
+}
+
+@keyframes rotate-card-left-1{
+    0%{
+        transform: translateZ(-10px)  rotateY(-10deg) skewY(-1deg);
+    }
+    100%{
+        transform:translateZ(10px)  rotateY(0deg);   
+    }
+}

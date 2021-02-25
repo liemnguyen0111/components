@@ -1,0 +1,14 @@
+#root {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* overflow: scroll; */
+  background: #0E1023;
+}
+/*# sourceMappingURL=index.css.map */
