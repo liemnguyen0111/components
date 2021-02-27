@@ -5,6 +5,7 @@ header {
   left: 0;
   height: 70px;
   overflow: hidden;
+  z-index: 10;
 }
 
 nav {

@@ -1,6 +1,7 @@
 #root {
   position: relative;
   min-height: 100vh;
+  max-width: 1600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,7 +9,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: auto;
   /* overflow: scroll; */
-  background: #0E1023;
 }
 /*# sourceMappingURL=index.css.map */

@@ -1,10 +1,13 @@
 #root{
     position: relative;
     min-height: 100vh;
+    max-width: 1600px;
     display: flex;
     flex-direction: column;
+    margin: auto;
     /* overflow: scroll; */
-  background: #0E1023;
+  // background: #262627;
   //   background: url('../assets//images/Background-5.jpg') no-repeat left center fixed;
   // background-size: cover;
+
   }

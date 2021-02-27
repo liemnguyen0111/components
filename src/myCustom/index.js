@@ -11,27 +11,45 @@ const utils = {
   joinWithHyphen: (string) => string.split(" ").join("-"),
 
   // Listen to window resize
-  useWindowSize: () => {
-    const getSize = () => {
-      return {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-    };
+  // useWindowSize: () => {
+  //   const getSize = () => {
+  //     return {
+  //       width: window.innerWidth,
+  //       height: window.innerHeight,
+  //     };
+  //   };
 
-    const [windowSize, setWindowSize] = useState(getSize);
+  //   const [windowSize, setWindowSize] = useState(getSize);
 
-    useEffect(() => {
-      function handleResize() {
-        setWindowSize(getSize());
-      }
+  //   useEffect(() => {
+  //     function handleResize() {
+  //       setWindowSize(getSize());
+  //     }
 
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
+  //     window.addEventListener("resize", handleResize);
+  //     return () => window.removeEventListener("resize", handleResize);
+  //   }, []);
 
-    return windowSize;
-  },
+  //   return windowSize;
+  // },
+
+  // Computed element height
+  getElmHeight : (node) => {
+    const list = [
+      'margin-top',
+      'margin-bottom',
+      'border-top',
+      'border-bottom',
+      'padding-top',
+      'padding-bottom',
+      'height'
+  ]
+
+  const style = window.getComputedStyle(node)
+  return list
+      .map(k => parseInt(style.getPropertyValue(k), 10))
+      .reduce((prev, cur) => prev + cur)
+  }
 };
 
 export default utils;
