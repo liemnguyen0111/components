@@ -24,7 +24,7 @@ export default class Navigation extends Component {
   };
 
   render() {
-    const list = ["projects", "experiences", "about", "get in touch"];
+    const list = ["projects", "experiences", "about", "contact"];
     return (
       <Router>
         <nav>

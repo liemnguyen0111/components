@@ -34,9 +34,9 @@ function App() {
       <StrictMode>
         <div ref={sectionWrapper} className="section-wrapper">
           <Section name={"projects"} view={<Projects />} />
-          <Section name={"experiences"} />
-          <Section name={"about"} />
-          <Section name={"get-in-touch"} />
+          {/* <Section name={"experiences"} /> */}
+          <Section name={"about"} view={<About />} />
+          <Section  />
         </div>
         <div ref={scrollDiv} className="scroll"></div>
       </StrictMode>

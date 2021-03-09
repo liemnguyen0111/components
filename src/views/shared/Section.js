@@ -6,7 +6,6 @@ export default class Section extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-
   }
 
   componentDidMount() {
@@ -26,21 +25,16 @@ export default class Section extends Component {
         className={`${this.props.class}`}
         id={this.props.name}
       >
-        <Title
-          title={this.props.name}
-          class={`section-title max-width-1600 margin-tb-50`}
-        />
-     
-        {this.props.view}
-    
-   
+        {this.props.name ? (
+          <Title
+            title={this.props.name}
+            class={`section-title  margin-tb-50`}
+          />
+        ) : (
+          ""
+        )}
 
-        {/* <div style={{display : 'flex', justifyContent: 'center', alignItems: 'center', maxWidth : 'calc(100% - 50px)', minWidth : '20rem', margin : 'auto'}}>
-  
-        {this.props.SVG}
-        </div> */}
-        {/* <img src={this.props.image} alt="" srcset="" style={{display : 'flex', justifyContent: 'center', alignItems: 'center', maxWidth : 'calc(100% - 50px)', minWidth : '20rem', margin : 'auto'}}/> */}
-        {/* {this.props.name} */}
+        <div className="view">{this.props.view}</div>
       </section>
     );
   }

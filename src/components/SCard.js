@@ -7,9 +7,9 @@ const SCard = (props) => {
 
   return (
     <div
-      className="small-card-wrapper flex-col">
-      <div className="small-card ">
-        <div className="small-card-header flex-row a-center">
+      className="small-card-wrapper flex-col " data-index={props.index}>
+      <div className="small-card glass-background ">
+        <div className="small-card-header flex-row a-center ">
           <h2 className="flex-span">ESPACE</h2>
 
           <div className="links">
@@ -29,7 +29,8 @@ const SCard = (props) => {
         </div>
 
         <div className="small-card-details">
-          <div className="small-card-image">{props.svg}</div>
+          <img className="small-card-image" src={props.png} alt=""/>
+          {/* <div className="small-card-image">{props.svg}</div> */}
           <div className="small-card-description">
             Space is always expanding, so our knowledge keeps growing with it.
             Have fun on this site because there is always more to learn about
@@ -43,13 +44,13 @@ const SCard = (props) => {
             ref={techList}
             className={`flex-row no-style no-margin no-padding`}
           >
-            <div className="list-1 flex-row">
+            <div className="list-1 ">
               <li className="logo-brand">REST API</li>
               <li className="logo-brand">HTML5</li>
               <li className="logo-brand">ES6</li>
               <li className="logo-brand">CSS3</li>
             </div>
-            <div className="list-2 flex-row">
+            <div className="list-2 ">
               <li className="logo-brand">REST API</li>
               <li className="logo-brand">HTML5</li>
               <li className="logo-brand">ES6</li>

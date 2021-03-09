@@ -5,7 +5,7 @@ const skewConfigs = {
   rounded: 0,
 };
 
-const skewScrolling = (section, size) => {
+const skewScrolling = (section) => {
   skewConfigs.current = window.scrollY;
   skewConfigs.previous +=
     (skewConfigs.current - skewConfigs.previous) * skewConfigs.ease;
@@ -13,14 +13,14 @@ const skewScrolling = (section, size) => {
 
   // variables
   const difference = skewConfigs.current - skewConfigs.rounded;
-  const acceleration = difference / size.width;
+  const acceleration = difference / window.innerWidth;
   const velocity = +acceleration;
   const skew = velocity * 15;
 
   //
   section.style.transform = `translate3d(0, -${skewConfigs.rounded}px, 0) skewY(${skew}deg)`;
 
-  requestAnimationFrame(() => skewScrolling(section, size));
+  requestAnimationFrame(() => skewScrolling(section));
 };
 
 export default skewScrolling;

@@ -32,7 +32,6 @@ const BCard = (props) => {
         <div
           className="b-card-info flex-col card-item-size text-align-left"
           ref={cardInfo}
-          data-aos="zoom-out-left"
         >
           <div className="b-card-title flex-row a-center">
             <h2 className="flex-span " >Chatbox</h2>
@@ -76,7 +75,7 @@ const BCard = (props) => {
           </div>
         </div>
 
-        <div className="b-card-image card-item-size" data-aos="zoom-out-right">{props.svg}</div>
+        <div className="b-card-image card-item-size" >{props.svg}</div>
       </div>
 
       <div className="tech-used">
