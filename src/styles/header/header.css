@@ -1,11 +1,14 @@
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   height: 70px;
+  background: rgba(36, 35, 35, 0.9);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   overflow: hidden;
   z-index: 10;
+  width: 100%;
 }
 
 nav {
@@ -17,6 +20,33 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  margin: 0 50px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.resume {
+  color: #0596FF;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  background: rgba(31, 38, 135, 0.1);
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  border: 1px solid #0596FF;
+  padding: 5px 20px;
 }
 
 .logo {

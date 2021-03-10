@@ -12,7 +12,7 @@ const Logo = ({ classes, onClick, svg }) => {
 
   return (
     <div className={classes}>
-      {/* <svg
+      <svg
         className={`logo SVGplay`}
         ref={logo}
         // id="logo"
@@ -105,7 +105,7 @@ const Logo = ({ classes, onClick, svg }) => {
             />
           </filter>
         </defs>
-      </svg> */}
+      </svg>
     </div>
   );
 };

@@ -1,0 +1,33 @@
+@mixin name {
+    // Name
+    @for $i from 1 through 9 {
+        #my-name path:nth-child(#{$i}){
+            stroke-dasharray: var(--nLength#{$i});
+            stroke-dashoffset: var(--nLength#{$i});
+        }
+    }
+
+    #my-name{
+        transition: .3s ease;
+        animation: fill-text 0.5s ease-in-out forwards 4s
+    }
+
+    @keyframes name-anim {
+        to{
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes fill-text{
+        from{
+            fill : transparent;
+        }
+        to{
+            stroke-dasharray : 0;
+            fill : white;
+            stroke-linejoin: round;
+        }
+    }
+}
+
+@include name;

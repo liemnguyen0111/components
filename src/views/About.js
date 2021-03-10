@@ -20,27 +20,43 @@ export default class About extends Component {
               Specialize in the
               <span className="mern-txt">
                 <span title="Mongo Database">
-                  <a href="https://www.mongodb.com/" target="_blank">
+                  <a
+                    href="https://www.mongodb.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {" "}
                     M{" "}
                   </a>
                 </span>
                 <span title="Express.js">
-                  <a href="https://expressjs.com/" target="_blank">
+                  <a
+                    href="https://expressjs.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {" "}
                     E{" "}
                   </a>
                 </span>
                 <span title="React.js">
                   {" "}
-                  <a href="https://reactjs.org/" target="_blank">
+                  <a
+                    href="https://reactjs.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {" "}
                     R{" "}
                   </a>
                 </span>
                 <span title="Node.js">
                   {" "}
-                  <a href="https://nodejs.org/en/docs/" target="_blank">
+                  <a
+                    href="https://nodejs.org/en/docs/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {" "}
                     N{" "}
                   </a>{" "}
@@ -100,8 +116,6 @@ export default class About extends Component {
             </li>
           </ul>
         </div>
-        <h2>Like what you see?</h2>
-        <div className="get-in-touch-btn">Get In Touch</div>
       </div>
     );
   }

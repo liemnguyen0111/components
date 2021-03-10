@@ -1,17 +1,43 @@
-header{
-    position: sticky;
+header {
+    position: fixed;
     top: 0;
     left: 0;
     height: 70px;
+    background: rgba(36, 35, 35, 0.9);
+    backdrop-filter: blur(5px);
     // background: rgb(110, 110, 110);
     overflow: hidden;
     z-index: 10;
+    width: 100%;
 }
 
-nav{
+nav {
     position: relative;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin: 0 50px;
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+}
+
+.resume{
+    color: #0596FF;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    background: rgba(31, 38, 135, 0.1);
+    // box-shadow: 0 0px 10px 0 #0597ffb8;
+    backdrop-filter: blur(7.0px);
+    // border: 1px solid rgba(31, 38, 135, 1);
+    border: 1px solid #0596FF;
+    padding: 5px 20px;
 }
 
 // Logo -----------------------------
@@ -20,41 +46,44 @@ nav{
     width: 50px;
     pointer-events: auto !important;
     z-index: 3;
+
     path {
         pointer-events: none;
     }
 }
 
-.SVGplay g:nth-child(1) path{
+.SVGplay g:nth-child(1) path {
     stroke-dasharray: 310.3;
     stroke-dashoffset: 0;
-    animation: logo-play 3s ease-out  ;
+    animation: logo-play 3s ease-out;
 }
 
 
-.SVGplay g:nth-child(2) path{
+.SVGplay g:nth-child(2) path {
     stroke-dasharray: 15.72;
     stroke-dashoffset: 0;
-    animation: logo-play2 3s ease-out  ;
+    animation: logo-play2 3s ease-out;
 }
 
 @keyframes logo-play {
-    from{
+    from {
         stroke-dasharray: 150;
         stroke-dashoffset: 300.8;
     }
-    to{
+
+    to {
         stroke-dasharray: 310.3;
         stroke-dashoffset: 0;
     }
 }
 
 @keyframes logo-play2 {
-    from{
+    from {
         stroke-dasharray: 6.72;
         stroke-dashoffset: 15.72;
     }
-    to{
+
+    to {
         stroke-dasharray: 15.72;
         stroke-dashoffset: 0;
     }

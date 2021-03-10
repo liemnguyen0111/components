@@ -24,11 +24,12 @@ export default class Navigation extends Component {
   };
 
   render() {
-    const list = ["projects", "experiences", "about", "contact"];
+    const list = ["projects", "about", "contact", 'resume'];
     return (
       <Router>
         <nav>
           <Logo/>
+          <ul className="links">
           {list.map((val, index) => (
             <NavLink
               key={index}
@@ -40,10 +41,13 @@ export default class Navigation extends Component {
               data-link={`${val}`}
               onClick={this.onClick}
               ref={this.init}
+              className={`${val}`}
             >
               {upperFirst(val)}
             </NavLink>
           ))}
+          </ul>
+        
         </nav>
       </Router>
     );
