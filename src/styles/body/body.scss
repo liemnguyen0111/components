@@ -53,6 +53,30 @@ section {
   // overflow: auto;
 }
 
+.scroll-bar{
+  /* width */
+&::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+&::-webkit-scrollbar-track {
+  background: #f1f1f107;
+  border-radius: 50px;
+}
+
+/* Handle */
+&::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+&::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+}
 
 // Shared classes -------------------------------------------------------------------------------------------
 .flex {
@@ -219,8 +243,8 @@ i {
   &::after {
     content: "";
     position: absolute;
-
-    width: 20rem;
+    width: 100%;
+    max-width: 20rem;
     height: 2px;
 
     bottom: 0;
@@ -664,7 +688,7 @@ i {
   .achivements {
     // margin: 50px auto 0 auto;
     margin-top: 50px;
-
+    overflow: visible;
     img {
       width: 100%;
     }
@@ -797,7 +821,8 @@ i {
     // margin-bottom: 10px;
     margin: 0px;
   }
-  a{
+
+  a {
     color: white;
     margin: 20px;
   }
@@ -844,20 +869,21 @@ i {
   font-weight: bolder;
   width: fit-content;
   height: fit-content;
-  margin: 20px auto 0 auto;
-  padding: 10px 20px;
-  border-radius: 50px;
+  margin: 30px auto 0 auto;
 
   a {
+    
+    padding: 10px 20px;
     color: #0596FF;
     text-decoration: none;
+
+    background: rgba(31, 38, 135, 0.1);
+    backdrop-filter: blur(7.0px);
+    border: 1px solid #0596FF;
+    border-radius: 50px;
   }
 
-  background: rgba(31, 38, 135, 0.1);
-  // box-shadow: 0 0px 10px 0 #0597ffb8;
-  backdrop-filter: blur(7.0px);
-  // border: 1px solid rgba(31, 38, 135, 1);
-  border: 1px solid #0596FF;
+
 }
 
 .line {
@@ -974,6 +1000,7 @@ footer {
   letter-spacing: 3px;
 }
 
+
 // Media queries -------------------------------------------------------------------------------------------
 @media only screen and (min-width : 600px) {
   .max-600 {
@@ -991,12 +1018,17 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  // .min-600 {
+  //   display: none;
+  // }
 
-  .section-title{
-    margin: 50px 10px !important;
-  }
+  // .section-title {
+  //   margin: 50px 10px !important;
+  // }
+
   .view {
     margin: 0 20px;
+    // margin: 0;
   }
 
   .about-me {

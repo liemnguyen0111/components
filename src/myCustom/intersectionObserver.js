@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import useWindowSize from "./useWindowSize";
 const configs = {
   threshold: 0.2,

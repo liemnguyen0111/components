@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 
 const Logo = ({ classes, onClick, svg }) => {
   const logo = useRef(null);

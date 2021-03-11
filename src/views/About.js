@@ -98,7 +98,7 @@ export default class About extends Component {
             <h3>Achievements</h3>
           </div>
 
-          <ul className={`flex-row no-style no-padding`}>
+          <ul className={`flex-row no-style no-padding scroll-bar`}>
             <li className="logo-brand">
               <img src={htmlBadge} alt="" />
             </li>

@@ -18,10 +18,18 @@ export default class Contact extends Component {
         {/* <div className="line"></div> */}
 
         <div className="social-media flex-row a-center j-center">
-          <a href="">
+          <a
+            href="https://www.linkedin.com/in/liem-nguyen-588ba1114/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-linkedin"></i>
           </a>
-          <a href="">
+          <a
+            href="https://github.com/liemnguyen0111"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-github"></i>
           </a>
         </div>

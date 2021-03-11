@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { ReactComponent as TimNguyen } from "../assets/images/TimNguyen.svg";
+import scrollIntoView from '../myCustom/scrollIntoView'
 
-const Home = () => {
+const Home = (props) => {
   useEffect(() => {
     init();
   });
@@ -23,16 +24,16 @@ const Home = () => {
     });
   };
 
-  // const onClick = () => {
-  //   window.history.pushState({}, null, `/contact`);
-  //   scrollIntoView("contact");
-  // };
+  const onClick = () => {
+    const section = props.section;
+    scrollIntoView(section, "projects")
+  };
 
   return <div className="home flex-col a-center j-center">
     <p>Hello, my name is</p>
     <TimNguyen></TimNguyen>
     <p>I create things that live on the web.</p>
-    <div className="view-my-project">View My Projects</div>
+    <div className="view-my-project" onClick={onClick}>View My Projects</div>
   </div>;
 };
 

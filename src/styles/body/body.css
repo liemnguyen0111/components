@@ -1,3 +1,36 @@
+.line-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2.5px;
+  width: 100%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  pointer-events: none;
+}
+
+.line-2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2.5px;
+  width: 100%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  pointer-events: none;
+}
+
+.line-3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2.5px;
+  width: 100%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  pointer-events: none;
+}
+
 #my-name path:nth-child(1) {
   stroke-dasharray: var(--nLength1);
   stroke-dashoffset: var(--nLength1);
@@ -133,6 +166,32 @@ section {
 
 .scroll {
   width: 100%;
+}
+
+.scroll-bar {
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.scroll-bar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.scroll-bar::-webkit-scrollbar-track {
+  background: #f1f1f107;
+  border-radius: 50px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 50px;
+}
+
+.scroll-bar::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .flex {
@@ -296,7 +355,8 @@ i {
 .sub-title::after {
   content: "";
   position: absolute;
-  width: 20rem;
+  width: 100%;
+  max-width: 20rem;
   height: 2px;
   bottom: 0;
   background: white;
@@ -772,6 +832,7 @@ i {
 
 .about-me-wrapper .achivements {
   margin-top: 50px;
+  overflow: visible;
 }
 
 .about-me-wrapper .achivements img {
@@ -924,18 +985,18 @@ i {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 20px auto 0 auto;
+  margin: 30px auto 0 auto;
+}
+
+.say-hello a {
   padding: 10px 20px;
-  border-radius: 50px;
+  color: #0596FF;
+  text-decoration: none;
   background: rgba(31, 38, 135, 0.1);
   -webkit-backdrop-filter: blur(7px);
           backdrop-filter: blur(7px);
   border: 1px solid #0596FF;
-}
-
-.say-hello a {
-  color: #0596FF;
-  text-decoration: none;
+  border-radius: 50px;
 }
 
 .line {
@@ -1045,9 +1106,6 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
-  .section-title {
-    margin: 50px 10px !important;
-  }
   .view {
     margin: 0 20px;
   }

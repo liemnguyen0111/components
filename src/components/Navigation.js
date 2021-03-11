@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { NavHashLink as NavLink } from "react-router-hash-link";
-import Logo from './Logo'
-import Utils from '../myCustom/index.js'
+import scrollIntoView from "../myCustom/scrollIntoView";
+import Hamburger from "./Hamburger";
+import Logo from "./Logo";
+import resume from '../assets/files/resume.docx'
+import Utils from "../myCustom/index.js";
 
-const { upperFirst, joinWithHyphen } = Utils
+const { upperFirst } = Utils;
 
 export default class Navigation extends Component {
   constructor(props) {
@@ -15,39 +17,54 @@ export default class Navigation extends Component {
 
   onClick = (event) => {
     this.active = event.target;
+    document.body.classList.toggle("toggle");
+
+    const section = this.props.section;
+    scrollIntoView(section, this.active.dataset.link);
+
   };
 
-  init = (event) => {
-    if (window.location.hash.substring(1) === event.dataset.link) {
-      this.active = event;
-    }
+  home = () => {
+    window.scroll({
+      top: 0,
+      behavior: "smooth",
+    });
   };
-
+  
   render() {
-    const list = ["projects", "about", "contact", 'resume'];
+    const list = ["projects", "about", "contact"];
     return (
       <Router>
         <nav>
-          <Logo/>
-          <ul className="links">
-          {list.map((val, index) => (
-            <NavLink
-              key={index}
-              to={{ pathname: "/", hash: `#${joinWithHyphen(val)}` }}
-              scroll={(el) =>
-                el.scrollIntoView({ behavior: "smooth", block: "start" })
-              }
-              activeClassName="selected"
-              data-link={`${val}`}
+          <div onClick={this.home}>
+            <Logo />
+          </div>
+
+          <ul className="nav-links">
+            {list.map((val, index) => (
+              <li
+                key={index}
+                data-link={`${val}`}
+                onClick={this.onClick}
+                className={`${val}`}
+              >
+                {upperFirst(val)}
+              </li>
+            ))}
+
+            <li
+              key={"resume"}
+              data-link={`resume`}
               onClick={this.onClick}
-              ref={this.init}
-              className={`${val}`}
+              className={`resume`}
             >
-              {upperFirst(val)}
-            </NavLink>
-          ))}
+              <a href={resume} download> {upperFirst("resume")}</a>
+             
+            </li>
           </ul>
-        
+          <div className="max-600">
+            <Hamburger></Hamburger>
+          </div>
         </nav>
       </Router>
     );

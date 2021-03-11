@@ -1,26 +1,33 @@
-import React, { useState, useEffect, useRef } from "react";
-
+import React, { useRef } from "react";
+// import espace from 
 const SCard = (props) => {
   const techList = useRef();
 
-
-
   return (
-    <div
-      className="small-card-wrapper flex-col " data-index={props.index}>
+    <div className="small-card-wrapper flex-col " data-index={props.index} >
       <div className="small-card glass-background ">
         <div className="small-card-header flex-row a-center ">
-          <h2 className="flex-span">ESPACE</h2>
+          <h2 className="flex-span">{props.info.name}</h2>
 
           <div className="links">
             <ul className="no-style no-padding no-margin flex-row">
               <li>
-                <a className="no-style" href="#">
+                <a
+                  className="no-style"
+                  href={props.info.linkToGitHub}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fab fa-github"></i>
                 </a>
               </li>
               <li>
-                <a className="no-style" href="#">
+                <a
+                  className="no-style"
+                  href={props.info.linkToProject}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fas fa-external-link-alt"></i>
                 </a>
               </li>
@@ -29,13 +36,9 @@ const SCard = (props) => {
         </div>
 
         <div className="small-card-details">
-          <img className="small-card-image" src={props.png} alt=""/>
-          {/* <div className="small-card-image">{props.svg}</div> */}
-          <div className="small-card-description">
-            Space is always expanding, so our knowledge keeps growing with it.
-            Have fun on this site because there is always more to learn about
-            our universe!
-          </div>
+          <img className="small-card-image" src={props.info.image} alt="" />
+
+          <div className="small-card-description">{props.info.description}</div>
         </div>
 
         <div className="tech-used">
@@ -45,16 +48,14 @@ const SCard = (props) => {
             className={`flex-row no-style no-margin no-padding`}
           >
             <div className="list-1 ">
-              <li className="logo-brand">REST API</li>
-              <li className="logo-brand">HTML5</li>
-              <li className="logo-brand">ES6</li>
-              <li className="logo-brand">CSS3</li>
+              {props.info.techUsed.map((v,i) => (
+                <li className="logo-brand" key={i}>{v}</li>
+              ))}
             </div>
             <div className="list-2 ">
-              <li className="logo-brand">REST API</li>
-              <li className="logo-brand">HTML5</li>
-              <li className="logo-brand">ES6</li>
-              <li className="logo-brand">CSS3</li>
+              {props.info.techUsed.map((v,i) => (
+                <li className="logo-brand" key={i}>{v}</li>
+              ))}
             </div>
           </ul>
         </div>

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Title from "../../components/Title";
 
 export default class Section extends Component {
-  //  rellaxRef = useRef();
+
   constructor(props) {
     super(props);
     this.state = {};
@@ -25,7 +25,7 @@ export default class Section extends Component {
         className={`${this.props.class}`}
         id={this.props.name}
       >
-        {this.props.name ? (
+        {this.props.showName ? (
           <Title
             title={this.props.name}
             class={`section-title  margin-tb-50`}

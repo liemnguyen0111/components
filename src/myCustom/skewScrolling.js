@@ -7,6 +7,7 @@ const skewConfigs = {
 
 const skewScrolling = (section) => {
   skewConfigs.current = window.scrollY;
+
   skewConfigs.previous +=
     (skewConfigs.current - skewConfigs.previous) * skewConfigs.ease;
   skewConfigs.rounded = Math.round(skewConfigs.previous * 100) / 100;
